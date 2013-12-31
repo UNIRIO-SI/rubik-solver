@@ -1,1 +1,4 @@
 /bin
+
+# Don't Ignore Assets #
+!/bin/assets/*

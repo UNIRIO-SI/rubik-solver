@@ -1,0 +1,12 @@
+# Don't Ignore Assets #
+!/bin/assets/*
+
+# Pre-Compiled Files #
+*.class
+
+# Automatic Generated Files #
+*.applet
+
+# Package Files #
+*.war
+*.ear
