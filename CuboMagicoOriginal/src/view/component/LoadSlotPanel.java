@@ -4,12 +4,12 @@ import br.com.etyllica.core.event.GUIEvent;
 import br.com.etyllica.core.event.KeyEvent;
 import br.com.etyllica.core.event.PointerEvent;
 import br.com.etyllica.gui.Button;
-import br.com.etyllica.gui.GUIComponent;
 import br.com.etyllica.gui.Panel;
+import br.com.etyllica.gui.View;
 import br.com.etyllica.gui.label.TextLabel;
 import br.com.etyllica.gui.spinner.IntegerSpinner;
 
-public class LoadSlotPanel extends GUIComponent{
+public class LoadSlotPanel extends View{
 
 	private Button cancelButton;
 	

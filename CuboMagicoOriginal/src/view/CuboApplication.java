@@ -13,7 +13,7 @@ import model.objetos3d.CuboCompleto;
 import model.rotations.Rotations;
 import model.rotations.RotationsImpl;
 import view.application.CuboGUIApplication;
-import br.com.etyllica.core.event.GUIAction;
+import br.com.etyllica.core.event.Action;
 import br.com.etyllica.core.event.GUIEvent;
 import br.com.etyllica.core.event.KeyEvent;
 import br.com.etyllica.core.event.PointerEvent;
@@ -80,21 +80,21 @@ public class CuboApplication extends CuboGUIApplication {
 
 		defineAcoesBotoes();
 
-		buttonSolve.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(this, "resolve"));
+		buttonSolve.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(this, "resolve"));
 
-		buttonSave.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(this, "mostraPainelSalvar"));
-		saveSlotPanel.getCancelButton().addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(this, "escondePainelSalvar"));
-		saveSlotPanel.getConfirmButton().addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(this, "salva"));
+		buttonSave.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(this, "mostraPainelSalvar"));
+		saveSlotPanel.getCancelButton().addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(this, "escondePainelSalvar"));
+		saveSlotPanel.getConfirmButton().addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(this, "salva"));
 
-		buttonLoad.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(this, "mostraPainelCarregar"));
-		loadSlotPanel.getCancelButton().addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(this, "escondePainelCarregar"));
-		loadSlotPanel.getConfirmButton().addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(this, "carrega"));
+		buttonLoad.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(this, "mostraPainelCarregar"));
+		loadSlotPanel.getCancelButton().addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(this, "escondePainelCarregar"));
+		loadSlotPanel.getConfirmButton().addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(this, "carrega"));
 
-		buttonScramble.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(this, "mostraPainel"));
+		buttonScramble.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(this, "mostraPainel"));
 
-		scramblePanel.getCancelButton().addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(this, "escondePainel"));
+		scramblePanel.getCancelButton().addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(this, "escondePainel"));
 
-		scramblePanel.getConfirmButton().addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(this, "embaralha"));
+		scramblePanel.getConfirmButton().addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(this, "embaralha"));
 
 		cubo.addListener(timelinePanel);
 
@@ -113,7 +113,7 @@ public class CuboApplication extends CuboGUIApplication {
 	}
 
 	@Override
-	public void timeUpdate(){
+	public void timeUpdate(long now){
 
 		cubo.anima();
 
@@ -274,24 +274,24 @@ public class CuboApplication extends CuboGUIApplication {
 
 	private void defineAcoesBotoes(){
 
-		buttonU.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(cubo, "giraU"));
-		buttonU_.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(cubo, "giraU_"));
+		buttonU.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(cubo, "giraU"));
+		buttonU_.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(cubo, "giraU_"));
 
-		buttonD.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(cubo, "giraD_"));
-		buttonD_.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(cubo, "giraD"));
+		buttonD.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(cubo, "giraD_"));
+		buttonD_.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(cubo, "giraD"));
 
-		buttonL.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(cubo, "giraL_"));
-		buttonL_.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(cubo, "giraL"));
+		buttonL.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(cubo, "giraL_"));
+		buttonL_.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(cubo, "giraL"));
 
-		buttonR.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(cubo, "giraR"));
-		buttonR_.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(cubo, "giraR_"));
+		buttonR.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(cubo, "giraR"));
+		buttonR_.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(cubo, "giraR_"));
 
 		//OpenGL usa orientação anti-horária para rotação  
-		buttonF.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(cubo, "giraF_"));
-		buttonF_.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(cubo, "giraF"));
+		buttonF.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(cubo, "giraF_"));
+		buttonF_.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(cubo, "giraF"));
 
-		buttonB.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(cubo, "giraB"));
-		buttonB_.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new GUIAction(cubo, "giraB_"));
+		buttonB.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(cubo, "giraB"));
+		buttonB_.addAction(GUIEvent.MOUSE_LEFT_BUTTON_UP, new Action(cubo, "giraB_"));
 
 	}
 

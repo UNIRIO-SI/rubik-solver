@@ -6,7 +6,6 @@
 	<classpathentry kind="lib" path="lib/sqlite-jdbc-3.7.2.jar"/>
 	<classpathentry kind="lib" path="lib/ormlite-core-4.47.jar"/>
 	<classpathentry kind="lib" path="lib/ormlite-jdbc-4.47.jar"/>
-	<classpathentry kind="lib" path="lib/etyllica-2.8-3D.jar"/>
-	<classpathentry kind="lib" path="lib/etyllica-2.8.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Etyllica"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

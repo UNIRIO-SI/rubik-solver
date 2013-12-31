@@ -6,17 +6,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import controller.Timeline;
 import model.objetos3d.CuboCompletoListener;
 import br.com.etyllica.core.event.GUIEvent;
 import br.com.etyllica.core.event.KeyEvent;
 import br.com.etyllica.core.event.PointerEvent;
 import br.com.etyllica.core.video.Graphic;
-import br.com.etyllica.gui.GUIComponent;
 import br.com.etyllica.gui.Panel;
+import br.com.etyllica.gui.View;
 import br.com.etyllica.gui.label.ImageLabel;
+import controller.Timeline;
 
-public class TimeLinePanel extends GUIComponent implements CuboCompletoListener{
+public class TimeLinePanel extends View implements CuboCompletoListener{
 		
 	private List<ImageLabel> buttons;
 	
