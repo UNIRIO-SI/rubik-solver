@@ -1,5 +1,6 @@
-package view;
 
+
+import view.CuboApplication;
 import br.com.etyllica.EtyllicaFrame;
 
 public class CuboVisual extends EtyllicaFrame{
@@ -15,11 +16,9 @@ public class CuboVisual extends EtyllicaFrame{
 
 	@Override
 	public void startGame() {
-		// TODO Auto-generated method stub
-		String s = getClass().getResource("").toString();
-		setPath(s+"../");
 		
 		setMainApplication(new CuboApplication(this.w, this.h));
+		
 	}
 	
 }
