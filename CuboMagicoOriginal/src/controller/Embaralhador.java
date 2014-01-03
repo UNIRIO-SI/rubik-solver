@@ -67,7 +67,7 @@ public class Embaralhador {
 		int numero = random.nextInt(rotacoesAbreviacao.size());
 
 		Method metodo = rotacoesAbreviacao.get(numero).getMetodo();
-
+		
 		String rotationName = rotacoesAbreviacao.get(numero).getAbreviacao();
 
 		timelinePanel.addRotation(rotationName);
