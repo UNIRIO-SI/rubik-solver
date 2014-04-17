@@ -2,8 +2,9 @@
 
 import view.CuboApplication;
 import br.com.etyllica.EtyllicaFrame;
+import br.com.etyllica.context.Application;
 
-public class CuboVisual extends EtyllicaFrame{
+public class CuboVisual extends EtyllicaFrame {
 
 	public CuboVisual() {
 		super(800, 768);
@@ -15,10 +16,9 @@ public class CuboVisual extends EtyllicaFrame{
 	}
 
 	@Override
-	public void startGame() {
-		
-		setMainApplication(new CuboApplication(this.w, this.h));
-		
+	public Application startApplication() {
+
+		return new CuboApplication(this.w, this.h);
 	}
 	
 }
