@@ -4,8 +4,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.sql.SQLException;
 
-import com.j256.ormlite.dao.Dao;
-
 import model.Resolucao;
 import model.cubos.CuboMagico;
 import model.cubos.CuboMagico3x3x3;
@@ -17,7 +15,10 @@ import br.com.etyllica.core.event.Action;
 import br.com.etyllica.core.event.GUIEvent;
 import br.com.etyllica.core.event.KeyEvent;
 import br.com.etyllica.core.event.PointerEvent;
-import br.com.etyllica.core.video.Graphic;
+import br.com.etyllica.core.graphics.Graphic;
+
+import com.j256.ormlite.dao.Dao;
+
 import controller.Embaralhador;
 import database.BancoDeDados;
 

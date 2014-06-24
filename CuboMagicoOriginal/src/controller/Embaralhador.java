@@ -24,12 +24,12 @@ public class Embaralhador {
 
 	private Map<String, Method> metodosPorAbreviacao = new HashMap<String, Method>();
 
-	public Embaralhador(TimeLinePanel timelinePanel){
+	public Embaralhador(TimeLinePanel timelinePanel) {
 		super();
 
 		this.timelinePanel = timelinePanel;
 
-		int index = -1;
+		int index = 0;
 
 		addRotacao(index++, "U", "girarCimaSentidoHorario");
 		addRotacao(index++, "U_", "girarCimaSentidoAntiHorario");
@@ -48,9 +48,9 @@ public class Embaralhador {
 
 	}	
 
-	public void embaralha(CuboMagico cubo, int passos){
+	public void embaralha(CuboMagico cubo, int passos) {
 
-		for(int i=0;i<passos;i++){
+		for(int i=0;i<passos;i++) {
 
 			rotacionaAleatorio(cubo);
 
@@ -58,7 +58,7 @@ public class Embaralhador {
 
 	}
 
-	private void rotacionaAleatorio(CuboMagico cubo){
+	private void rotacionaAleatorio(CuboMagico cubo) {
 
 		Random random = new Random();
 
@@ -66,8 +66,12 @@ public class Embaralhador {
 
 		int numero = random.nextInt(rotacoesAbreviacao.size());
 
-		Method metodo = rotacoesAbreviacao.get(numero).getMetodo();
+		if(rotacoesAbreviacao.get(numero)==null) {
+			System.out.println(numero +" is null.");
+		}
 		
+		Method metodo = rotacoesAbreviacao.get(numero).getMetodo();
+				
 		String rotationName = rotacoesAbreviacao.get(numero).getAbreviacao();
 
 		timelinePanel.addRotation(rotationName);
@@ -91,8 +95,8 @@ public class Embaralhador {
 
 	}
 
-	private void addRotacao(int index, String abreviacao, String nomeMetodo){
-
+	private void addRotacao(int index, String abreviacao, String nomeMetodo) {
+		
 		Rotacao rotacao = new Rotacao(abreviacao, nomeMetodo);
 		
 		rotacoesAbreviacao.put(index, rotacao);
@@ -100,7 +104,7 @@ public class Embaralhador {
 
 	}
 	
-	public Method getMetodo(String abreviacao){
+	public Method getMetodo(String abreviacao) {
 		return metodosPorAbreviacao.get(abreviacao);
 	}
 

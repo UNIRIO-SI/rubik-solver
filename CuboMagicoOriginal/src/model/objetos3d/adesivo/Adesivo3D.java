@@ -4,10 +4,10 @@ import java.awt.Color;
 
 import org.jgl.GLAUX;
 
-import br.com.luvia.GLDrawable;
-import br.com.luvia.linear.Point3D;
+import br.com.abby.GLDrawable;
+import br.com.abby.linear.Point3D;
 
-public abstract class Adesivo3D extends Point3D implements GLDrawable{
+public abstract class Adesivo3D extends Point3D implements GLDrawable {
 
 	protected float angleX = 0;
 	

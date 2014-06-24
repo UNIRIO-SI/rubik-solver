@@ -21,10 +21,10 @@ import model.rotations.RotationsImpl;
 
 import org.jgl.GLAUX;
 
-import br.com.etyllica.util.SVGColor;
-import br.com.luvia.GLDrawable;
+import br.com.abby.GLDrawable;
+import br.com.etyllica.core.graphics.SVGColor;
 
-public class CuboCompleto extends CuboAnimado implements GLDrawable{
+public class CuboCompleto extends CuboAnimado implements GLDrawable {
 
 	private final float SIZE = 0.2f;
 
